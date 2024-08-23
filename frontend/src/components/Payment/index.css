@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.underline{
+    color: rgb(8, 204, 238);
+    font-size: 20px;
+ 
+}
+.payment-head{
+    color: black;
+    font-weight: 500;
+    align-self: center;
+}
+.records-container{
+    display: flex;
+    flex-direction: column;
+}
+.record{
+    display: flex;
+    justify-content: space-around;
+}
+.pay{
+    align-self: center;
+}

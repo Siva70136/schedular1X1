@@ -1,0 +1,23 @@
+.slot-form{
+    box-shadow: 1px 1px 8px 5px rgb(234, 233, 233);
+    width: 400px;
+    padding: 15px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.label{
+    font-size: 16px;
+    
+}
+.input-field{
+    border-radius: 7px;
+    padding: 7px;
+    outline: none;
+    border:1px solid black;
+    width: 200px;
+    align-self: flex-end;
+}

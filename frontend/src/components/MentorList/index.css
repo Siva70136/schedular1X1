@@ -1,0 +1,21 @@
+.mentor-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.mentor-card{
+    box-shadow: 1px 0px 5px 3px rgb(220, 219, 219);
+    width: 200px;
+    margin-right: 30px;
+    margin-top: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    align-self: center;
+}
+.id{
+    line-height: 2px;
+}
