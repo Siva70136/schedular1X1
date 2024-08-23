@@ -31,7 +31,7 @@ const ScheduleForm = () => {
             body: JSON.stringify(scheduleData)
         }
         try {
-            const res = await fetch('http://localhost:5000/api/book', options);
+            const res = await fetch('https://schedular1x1.onrender.com/api/book', options);
             const data = await res.json();
             setStudentId('');
             setAreaOfInterest('');

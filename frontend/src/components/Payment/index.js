@@ -13,7 +13,7 @@ const PaymentPage = () => {
 
     const getSchedules = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/bookings');
+            const res = await fetch('https://schedular1x1.onrender.com/api/bookings');
             const data = await res.json();
             setDuration(data[0].duration);
             setIsPremium(data[0].isPrime == 1 ? true : false);
