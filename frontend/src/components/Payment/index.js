@@ -10,9 +10,7 @@ const PaymentPage = () => {
 
     useEffect(() => {
         getSchedules();
-        if (duration === 30) setBaseCost(2000);
-        if (duration === 45) setBaseCost(3000);
-        if (duration === 60) setBaseCost(4000);
+
     }, [baseCost])
 
     const getSchedules = async () => {
@@ -21,13 +19,17 @@ const PaymentPage = () => {
             const data = await res.json();
             setDuration(data[0].duration);
             setIsPremium(data[0].isPrime == 1 ? true : false);
+            if (data[0].duration == 30) setBaseCost(2000);
+            if (data[0].duration == 45) setBaseCost(3000);
+            if (data[0].duration == 60) setBaseCost(4000);
+            
         }
         catch {
             console.log("error");
         }
     }
 
-    const calculateCost = () => {  
+    const calculateCost = () => {
         return isPremium ? baseCost + 1000 : baseCost;
     };
 
