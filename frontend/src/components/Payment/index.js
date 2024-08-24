@@ -5,11 +5,15 @@ import './index.css';
 const PaymentPage = () => {
     const [duration, setDuration] = useState(0);
     const [isPremium, setIsPremium] = useState(false);
-    let baseCost = 2000;
+    const [baseCost, setBaseCost] = useState(2000);
+    //let  = 2000;
 
     useEffect(() => {
         getSchedules();
-    }, [])
+        if (duration === 30) setBaseCost(2000);
+        if (duration === 45) setBaseCost(3000);
+        if (duration === 60) setBaseCost(4000);
+    }, [baseCost])
 
     const getSchedules = async () => {
         try {
@@ -23,10 +27,7 @@ const PaymentPage = () => {
         }
     }
 
-    const calculateCost = () => {
-        if (duration === 30) baseCost = 2000;
-        if (duration === 45) baseCost = 3000;
-        if (duration === 60) baseCost = 4000;
+    const calculateCost = () => {  
         return isPremium ? baseCost + 1000 : baseCost;
     };
 
